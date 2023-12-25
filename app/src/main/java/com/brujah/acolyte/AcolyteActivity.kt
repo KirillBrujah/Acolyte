@@ -16,6 +16,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.brujah.acolyte.ui.favourites.FavouritesScreen
+import com.brujah.acolyte.ui.potions.PotionsScreen
 import com.brujah.acolyte.ui.spells.SpellsScreen
 import com.brujah.acolyte.ui.theme.AcolyteTheme
 
@@ -55,6 +57,11 @@ fun AcolyteNavHost(
         composable(Spells.route) {
             SpellsScreen()
         }
-
+        composable(Potions.route) {
+            PotionsScreen()
+        }
+        composable(Favourites.route) {
+            FavouritesScreen()
+        }
     }
 }

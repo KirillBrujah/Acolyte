@@ -16,4 +16,14 @@ object Spells : AcolyteDestination {
     override val route = "spells"
 }
 
-val tabRowScreen = listOf(Spells)
+object Potions : AcolyteDestination {
+    override val icon = Icons.Filled.Create
+    override val route = "potions"
+}
+
+object Favourites : AcolyteDestination {
+    override val icon = Icons.Filled.Create
+    override val route = "favourites"
+}
+
+val tabRowScreen = listOf(Spells, Potions, Favourites)
