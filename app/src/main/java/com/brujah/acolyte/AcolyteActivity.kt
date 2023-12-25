@@ -20,7 +20,10 @@ import com.brujah.acolyte.ui.favourites.FavouritesScreen
 import com.brujah.acolyte.ui.potions.PotionsScreen
 import com.brujah.acolyte.ui.spells.SpellsScreen
 import com.brujah.acolyte.ui.theme.AcolyteTheme
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
