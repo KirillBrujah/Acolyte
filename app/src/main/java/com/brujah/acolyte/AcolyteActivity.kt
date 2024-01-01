@@ -23,7 +23,7 @@ import com.brujah.acolyte.ui.theme.AcolyteTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
 
-@AndroidEntryPoint
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +38,8 @@ class MainActivity : ComponentActivity() {
 fun AcolyteApp() {
     AcolyteTheme {
         val navController = rememberNavController()
+
+
 
         Scaffold { innerPadding ->
             AcolyteNavHost(
