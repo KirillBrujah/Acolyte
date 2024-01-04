@@ -1,13 +1,17 @@
 package com.brujah.acolyte.ui.spells
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.brujah.acolyte.data.Spell
+import com.brujah.acolyte.data.SpellsApi
 import com.brujah.acolyte.data.SpellsLocalDataSource
 import com.brujah.acolyte.data.SpellsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -24,6 +28,24 @@ class SpellsViewModel @Inject constructor(
 
 
     // TODO: Add/Remove spell from Favorites
+
+
+
+    private fun getSpells() {
+        viewModelScope.launch {
+            val listResult = SpellsApi.retrofitService.getSpells()
+            val result = SpellsApi.retrofitService.getSpell("d8233516-c8b0-4294-89b8-1e35eec4e820")
+
+            Log.d("SpellsViewModel", listResult.toString())
+            Log.d("SpellsViewModel", result.toString())
+        }
+    }
+
+    init {
+        getSpells()
+    }
+
+
 
     private val _searchState = MutableStateFlow("")
     val searchState: StateFlow<String> = _searchState.asStateFlow()
