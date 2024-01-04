@@ -1,10 +1,11 @@
-package com.brujah.acolyte.data
+package com.brujah.acolyte.data.source.local
 
 import com.brujah.acolyte.data.Spell
 import javax.inject.Inject
 import javax.inject.Singleton
 
 
+// TODO: Rework with Room
 @Singleton
 class SpellsLocalDataSource @Inject constructor() {
     val spells: List<Spell> = listOf(

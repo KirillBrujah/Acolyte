@@ -69,20 +69,16 @@ dependencies {
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.48.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
-    // Retrofit
+    // Retrofit + Moshi
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     // TODO: Remove if not need
     implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
-
-
-    // Moshi
-//    implementation("com.squareup.moshi:moshi:1.15.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.4.0")
     //noinspection KaptUsageInsteadOfKsp
