@@ -44,11 +44,5 @@ fun SpellsScreen(
             SpellCard(spell = spell)
             Spacer(modifier = Modifier.size(5.dp))
         }
-
-        ElevatedButton(onClick = {
-            navController.navigate(Potions.route)
-        }) {
-            Text("TO POTIONS")
-        }
     }
 }

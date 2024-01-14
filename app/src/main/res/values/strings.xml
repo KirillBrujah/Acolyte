@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Acolyte</string>
+    <string name="spells">Spells</string>
+    <string name="potions">Potions</string>
+    <string name="favourites">Favourites</string>
 </resources>
